@@ -96,3 +96,5 @@ coverage/
 
 # TypeScript cache
 *.tsbuildinfo
+
+datasets
