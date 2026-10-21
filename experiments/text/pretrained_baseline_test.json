@@ -1,0 +1,142 @@
+{
+  "split": "test",
+  "n": 2610,
+  "backend": {
+    "backend": "pretrained-huggingface",
+    "model_name": "j-hartmann/emotion-english-distilroberta-base",
+    "labels": [
+      "neutral",
+      "joy",
+      "sadness",
+      "anger",
+      "surprise",
+      "fear",
+      "disgust"
+    ],
+    "device": "cpu",
+    "context_used": false,
+    "embedding_dim": 768,
+    "max_length": 256,
+    "calibration": {
+      "temperature": 1.0,
+      "prior_strength": 0.0,
+      "has_class_prior": false
+    }
+  },
+  "metrics": {
+    "macro_f1": 0.3577,
+    "weighted_f1": 0.516,
+    "accuracy": 0.4973,
+    "top2_accuracy": 0.7,
+    "ece": 0.1608,
+    "per_class": {
+      "neutral": {
+        "precision": 0.7766,
+        "recall": 0.5812,
+        "f1": 0.6648,
+        "support": 1256
+      },
+      "joy": {
+        "precision": 0.5734,
+        "recall": 0.408,
+        "f1": 0.4767,
+        "support": 402
+      },
+      "sadness": {
+        "precision": 0.3611,
+        "recall": 0.1875,
+        "f1": 0.2468,
+        "support": 208
+      },
+      "anger": {
+        "precision": 0.36,
+        "recall": 0.3652,
+        "f1": 0.3626,
+        "support": 345
+      },
+      "surprise": {
+        "precision": 0.319,
+        "recall": 0.7367,
+        "f1": 0.4452,
+        "support": 281
+      },
+      "fear": {
+        "precision": 0.1143,
+        "recall": 0.16,
+        "f1": 0.1333,
+        "support": 50
+      },
+      "disgust": {
+        "precision": 0.1159,
+        "recall": 0.3529,
+        "f1": 0.1745,
+        "support": 68
+      }
+    },
+    "confusion_matrix": [
+      [
+        730,
+        77,
+        47,
+        82,
+        202,
+        33,
+        85
+      ],
+      [
+        60,
+        164,
+        11,
+        56,
+        87,
+        4,
+        20
+      ],
+      [
+        56,
+        11,
+        39,
+        30,
+        38,
+        13,
+        21
+      ],
+      [
+        58,
+        19,
+        6,
+        126,
+        87,
+        9,
+        40
+      ],
+      [
+        15,
+        11,
+        1,
+        33,
+        207,
+        2,
+        12
+      ],
+      [
+        9,
+        1,
+        2,
+        10,
+        15,
+        8,
+        5
+      ],
+      [
+        12,
+        3,
+        2,
+        13,
+        13,
+        1,
+        24
+      ]
+    ]
+  }
+}
